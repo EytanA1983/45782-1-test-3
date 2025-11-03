@@ -1,0 +1,22 @@
+.Header {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.logo {
+    font-size: 3em;
+}

@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "nature-hiking-collection",
+		"name": "Nature Hiking Sites API",
+		"description": "API collection for Nature Protection Society Hiking Sites management system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Regions",
+			"item": [
+				{
+					"name": "Get All Regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"regions"
+							]
+						},
+						"description": "Returns a list of all regions in the country"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hiking Sites",
+			"item": [
+				{
+					"name": "Get Hiking Sites by Region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hiking-sites/by-region/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hiking-sites",
+								"by-region",
+								"1"
+							]
+						},
+						"description": "Returns hiking sites by region (1 = North)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Hiking Site",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"regionId\": 1,\n    \"name\": \"Carob Trees National Park\",\n    \"description\": \"Ancient carob forest with charming hiking trails. Suitable for the whole family. Picnic facilities available.\",\n    \"adultPrice\": 28.00,\n    \"childPrice\": 14.00\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/hiking-sites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hiking-sites"
+							]
+						},
+						"description": "Create a new hiking site"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Hiking Site",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hiking-sites/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hiking-sites",
+								"1"
+							]
+						},
+						"description": "Delete a hiking site by ID"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+    "app": {
+        "port": 3000,
+        "name": "Nature Protection Hiking Sites",
+        "secret": "MySecret",
+        "jwtSecret": "JwtSecret"
+    },
+    "db": {
+        "host": "localhost",
+        "port": 3306,
+        "username": "root",
+        "password": "",
+        "database": "nature_hiking"
+    }
+}
