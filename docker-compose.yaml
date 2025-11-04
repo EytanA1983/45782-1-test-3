@@ -3,12 +3,12 @@ version: '3.8'
 # services - here i am going to list containers that i want to build
 # each service, actually describes a docker run command
 services:
-  # Database service for nature hiking sites
+  # Database service for dev teams meetings
   database:
-    container_name: nature-hiking-db
+    container_name: dev-teams-db
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
-      - MYSQL_DATABASE=nature_hiking
+      - MYSQL_DATABASE=dev_teams_meetings
       - MYSQL_TCP_PORT=3306
     ports:
       - "3309:3306"
@@ -20,9 +20,9 @@ services:
       retries: 5
       start_period: 30s
   
-  # Backend service for nature hiking sites API
+  # Backend service for dev teams meetings API
   backend:
-    container_name: nature-hiking-backend
+    container_name: dev-teams-backend
     environment:
       - NODE_ENV=compose
     ports:
@@ -32,9 +32,9 @@ services:
       database:
         condition: service_healthy
         
-  # Frontend service for nature hiking sites UI
+  # Frontend service for dev teams meetings UI
   frontend:
-    container_name: nature-hiking-frontend
+    container_name: dev-teams-frontend
     ports: 
       - 3012:80
     build:

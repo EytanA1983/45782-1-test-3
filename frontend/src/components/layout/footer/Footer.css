@@ -1,7 +1,20 @@
 .Footer {
-    background: #2d5016;
-    color: white;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #d1d5db;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
+    margin-top: 60px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.Footer::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    margin: 0 auto 15px;
+    border-radius: 2px;
 }

@@ -1,12 +1,12 @@
 import { Sequelize } from "sequelize-typescript";
 import config from 'config'
-import Region from "../models/Region";
-import HikingSite from "../models/HikingSite";
+import Team from "../models/Team";
+import Meeting from "../models/Meeting";
 
 const sequelize = new Sequelize({
     ...config.get('db'),
     dialect: 'mysql',
-    models: [Region, HikingSite],
+    models: [Team, Meeting],
     logging: console.log
 })
 

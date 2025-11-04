@@ -1,7 +1,7 @@
 {
-    "name": "01-toysrus-server",
+    "name": "dev-teams-meetings-backend",
     "version": "1.0.0",
-    "description": "",
+    "description": "Development Teams Meetings Management - Backend API",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,13 +17,10 @@
         "cors": "^2.8.5",
         "express": "^5.1.0",
         "joi": "^18.0.1",
-        "jsonwebtoken": "^9.0.2",
-        "jwt-decode": "^4.0.0",
         "mysql2": "^3.15.1",
         "sequelize-typescript": "^2.1.6"
     },
     "devDependencies": {
-        "@types/jsonwebtoken": "^9.0.10",
         "@types/config": "^3.3.5",
         "@types/cors": "^2.8.19",
         "@types/express": "^5.0.3",

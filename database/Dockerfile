@@ -1,3 +1,3 @@
 FROM mysql:latest
 
-COPY ./nature_hiking.sql /docker-entrypoint-initdb.d/
+COPY ./dev_teams_meetings.sql /docker-entrypoint-initdb.d/

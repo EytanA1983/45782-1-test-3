@@ -5,8 +5,8 @@ import notFound from './middlewares/not-found';
 import config from 'config'
 import sequelize from './db/sequelize';
 import cors from 'cors'
-import regionsRouter from './routers/regions'
-import hikingSitesRouter from './routers/hiking-sites'
+import teamsRouter from './routers/teams'
+import meetingsRouter from './routers/meetings'
 
 const app = express()
 
@@ -18,24 +18,16 @@ const secret = config.get<string>('app.secret')
 console.log(`app secret is ${secret}`)
 
 app.use(cors())
-
-// post decypher middlewares
 app.use(json())
 
-// load routers
-app.use('/regions', regionsRouter)
-app.use('/hiking-sites', hikingSitesRouter)
+app.use('/teams', teamsRouter)
+app.use('/meetings', meetingsRouter)
 
-// not found
 app.use(notFound)
 
-// error middlewares
 app.use(logger)
 app.use(responder)
 
-// synchronize database schema (not data) changes to the database
-// i.e syncs our TypeScript models folder into the actual SQL Schema
-// sequelize.sync({ force: true })
 sequelize.sync({ force: process.argv[2] === 'sync' })
 
 console.log(process.argv)

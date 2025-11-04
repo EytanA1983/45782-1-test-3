@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "dev-teams-meetings-collection",
+		"name": "Development Teams Meetings API",
+		"description": "API collection for Development Teams Meetings management system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Get All Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams"
+							]
+						},
+						"description": "Returns a list of all development teams"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meetings",
+			"item": [
+				{
+					"name": "Get Meetings by Team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/meetings/by-team/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"meetings",
+								"by-team",
+								"1"
+							]
+						},
+						"description": "Returns meetings for a specific team (1 = Team UI)"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Meeting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"teamId\": 1,\n    \"startTime\": \"2025-11-06T10:00:00\",\n    \"endTime\": \"2025-11-06T11:00:00\",\n    \"description\": \"Weekly team standup meeting to discuss progress and blockers\",\n    \"room\": \"Blue Room\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/meetings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"meetings"
+							]
+						},
+						"description": "Create a new meeting for a team"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
+

@@ -1,8 +1,9 @@
 {
-    "name": "01-more-usage-for-curley-brackets",
+    "name": "dev-teams-meetings-frontend",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
+    "description": "Development Teams Meetings Management - Frontend UI",
     "scripts": {
         "dev": "vite",
         "docker": "vite --mode docker",
@@ -13,17 +14,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@reduxjs/toolkit": "^2.8.2",
         "axios": "^1.11.0",
-        "cheerio": "^1.1.2",
-        "jwt-decode": "^4.0.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
-        "react-hook-form": "^7.62.0",
-        "react-redux": "^9.2.0",
-        "react-router-dom": "^7.8.2",
-        "socket.io-client": "^4.8.1",
-        "uuid": "^13.0.0"
+        "react-router-dom": "^7.8.2"
     },
     "devDependencies": {
         "@eslint/js": "^9.33.0",
